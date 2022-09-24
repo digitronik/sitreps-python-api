@@ -9,4 +9,4 @@ rm -r docs
 mv $OUT_PATH/docs .
 rm -r test
 mv $OUT_PATH/test .
-
+rm -rf $OUT_PATH
