@@ -1,0 +1,50 @@
+[project]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "Topic :: Software Development :: Testing",
+]
+dependencies = [
+  "urllib3 >= 1.25.3",
+  "python-dateutil",
+]
+description = "Sitreps Python API."
+dynamic = ["version"]
+license = "MIT"
+maintainers = [{name = "Nikhil Dhandare", email = "ndhandre@redhat.com"}]
+name = "sitreps-python-api"
+readme = "README.md"
+
+[project.urls]
+Source = "https://github.com/digitronik/sitreps-python-api"
+
+[project.optional-dependencies]
+test = [
+  "pre-commit",
+  "pytest",
+  "pytest-cov",
+]
+
+[build-system]
+build-backend = "hatchling.build"
+requires = [
+  "hatchling>=1.3.1",
+  "hatch-vcs",
+]
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.sdist]
+include = ["/sitreps_pathon_api"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["/sitreps_python_api"]
