@@ -10,7 +10,7 @@
 """
 
 
-__version__ = "1.2.1"
+__version__ = "1.0.0"
 
 # import ApiClient
 from sitreps_python_api.api_client import ApiClient
