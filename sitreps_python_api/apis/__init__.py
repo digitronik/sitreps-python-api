@@ -18,6 +18,7 @@ from sitreps_python_api.api.code_coverage_api import CodeCoverageApi
 from sitreps_python_api.api.count_line_of_code_api import CountLineOfCodeApi
 from sitreps_python_api.api.integration_tests_api import IntegrationTestsApi
 from sitreps_python_api.api.jira_api import JiraApi
+from sitreps_python_api.api.metadata_api import MetadataApi
 from sitreps_python_api.api.project_groups_api import ProjectGroupsApi
 from sitreps_python_api.api.projects_api import ProjectsApi
 from sitreps_python_api.api.repositories_api import RepositoriesApi

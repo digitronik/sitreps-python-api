@@ -16,6 +16,7 @@ from sitreps_python_api.model.http_validation_error import HTTPValidationError
 from sitreps_python_api.model.integration_test_create import IntegrationTestCreate
 from sitreps_python_api.model.jira_create import JiraCreate
 from sitreps_python_api.model.location_inner import LocationInner
+from sitreps_python_api.model.metadata_create import MetadataCreate
 from sitreps_python_api.model.project_create import ProjectCreate
 from sitreps_python_api.model.project_group_create import ProjectGroupCreate
 from sitreps_python_api.model.project_group_update import ProjectGroupUpdate
