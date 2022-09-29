@@ -39,7 +39,7 @@ with sitreps_python_api.ApiClient() as api_client:
     metadata_create = MetadataCreate(
         time=dateutil_parser('1970-01-01T00:00:00.00Z'),
         repository_id=1,
-        metadata=[
+        meta=[
             None,
         ],
     ) # MetadataCreate | 

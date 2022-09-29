@@ -30,13 +30,6 @@ class TestDefaultApi(unittest.TestCase):
         """
         pass
 
-    def test_get_status(self):
-        """Test case for get_status
-
-        Get Status  # noqa: E501
-        """
-        pass
-
 
 if __name__ == '__main__':
     unittest.main()

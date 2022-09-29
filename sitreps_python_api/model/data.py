@@ -30,22 +30,14 @@ from sitreps_python_api.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from sitreps_python_api.model.cloc_create import CLOCCreate
-    from sitreps_python_api.model.code_coverage_create import CodeCoverageCreate
-    from sitreps_python_api.model.integration_test_create import IntegrationTestCreate
     from sitreps_python_api.model.jira_create import JiraCreate
     from sitreps_python_api.model.project_create import ProjectCreate
     from sitreps_python_api.model.project_group_create import ProjectGroupCreate
-    from sitreps_python_api.model.sonar_qube_create import SonarQubeCreate
-    from sitreps_python_api.model.unit_test_create import UnitTestCreate
-    globals()['CLOCCreate'] = CLOCCreate
-    globals()['CodeCoverageCreate'] = CodeCoverageCreate
-    globals()['IntegrationTestCreate'] = IntegrationTestCreate
+    from sitreps_python_api.model.repo_data import RepoData
     globals()['JiraCreate'] = JiraCreate
     globals()['ProjectCreate'] = ProjectCreate
     globals()['ProjectGroupCreate'] = ProjectGroupCreate
-    globals()['SonarQubeCreate'] = SonarQubeCreate
-    globals()['UnitTestCreate'] = UnitTestCreate
+    globals()['RepoData'] = RepoData
 
 
 class Data(ModelNormal):
@@ -103,12 +95,8 @@ class Data(ModelNormal):
         return {
             'project_group': (ProjectGroupCreate,),  # noqa: E501
             'project': (ProjectCreate,),  # noqa: E501
+            'repos': ([RepoData],),  # noqa: E501
             'jira': (JiraCreate,),  # noqa: E501
-            'sonarqube': ([SonarQubeCreate],),  # noqa: E501
-            'cloc': ([CLOCCreate],),  # noqa: E501
-            'codecoverage': ([CodeCoverageCreate],),  # noqa: E501
-            'unittests': ([UnitTestCreate],),  # noqa: E501
-            'integrationtests': ([IntegrationTestCreate],),  # noqa: E501
         }
 
     @cached_property
@@ -119,12 +107,8 @@ class Data(ModelNormal):
     attribute_map = {
         'project_group': 'project_group',  # noqa: E501
         'project': 'project',  # noqa: E501
+        'repos': 'repos',  # noqa: E501
         'jira': 'jira',  # noqa: E501
-        'sonarqube': 'sonarqube',  # noqa: E501
-        'cloc': 'cloc',  # noqa: E501
-        'codecoverage': 'codecoverage',  # noqa: E501
-        'unittests': 'unittests',  # noqa: E501
-        'integrationtests': 'integrationtests',  # noqa: E501
     }
 
     read_only_vars = {
@@ -134,12 +118,13 @@ class Data(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, project_group, project, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, project_group, project, repos, *args, **kwargs):  # noqa: E501
         """Data - a model defined in OpenAPI
 
         Args:
             project_group (ProjectGroupCreate):
             project (ProjectCreate):
+            repos ([RepoData]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -173,11 +158,6 @@ class Data(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             jira (JiraCreate): [optional]  # noqa: E501
-            sonarqube ([SonarQubeCreate]): [optional]  # noqa: E501
-            cloc ([CLOCCreate]): [optional]  # noqa: E501
-            codecoverage ([CodeCoverageCreate]): [optional]  # noqa: E501
-            unittests ([UnitTestCreate]): [optional]  # noqa: E501
-            integrationtests ([IntegrationTestCreate]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -211,6 +191,7 @@ class Data(ModelNormal):
 
         self.project_group = project_group
         self.project = project
+        self.repos = repos
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -231,12 +212,13 @@ class Data(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, project_group, project, *args, **kwargs):  # noqa: E501
+    def __init__(self, project_group, project, repos, *args, **kwargs):  # noqa: E501
         """Data - a model defined in OpenAPI
 
         Args:
             project_group (ProjectGroupCreate):
             project (ProjectCreate):
+            repos ([RepoData]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -270,11 +252,6 @@ class Data(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             jira (JiraCreate): [optional]  # noqa: E501
-            sonarqube ([SonarQubeCreate]): [optional]  # noqa: E501
-            cloc ([CLOCCreate]): [optional]  # noqa: E501
-            codecoverage ([CodeCoverageCreate]): [optional]  # noqa: E501
-            unittests ([UnitTestCreate]): [optional]  # noqa: E501
-            integrationtests ([IntegrationTestCreate]): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -306,6 +283,7 @@ class Data(ModelNormal):
 
         self.project_group = project_group
         self.project = project
+        self.repos = repos
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

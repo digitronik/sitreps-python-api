@@ -20,6 +20,7 @@ from sitreps_python_api.model.metadata_create import MetadataCreate
 from sitreps_python_api.model.project_create import ProjectCreate
 from sitreps_python_api.model.project_group_create import ProjectGroupCreate
 from sitreps_python_api.model.project_group_update import ProjectGroupUpdate
+from sitreps_python_api.model.repo_data import RepoData
 from sitreps_python_api.model.repository_create import RepositoryCreate
 from sitreps_python_api.model.repository_update import RepositoryUpdate
 from sitreps_python_api.model.sonar_qube_create import SonarQubeCreate

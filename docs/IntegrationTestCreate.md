@@ -28,8 +28,7 @@ Name | Type | Description | Notes
 **missing_interface_type** | **int** |  | [optional] 
 **missing_requirements** | **int** |  | [optional] 
 **missing_type** | **int** |  | [optional] 
-**metadata** | **[bool, date, datetime, dict, float, int, list, str, none_type]** |  | [optional] 
-**assignee** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
+**assignees** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
 **requirements** | **{str: (bool, date, datetime, dict, float, int, list, str, none_type)}** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

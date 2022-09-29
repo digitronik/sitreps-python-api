@@ -61,10 +61,7 @@ with sitreps_python_api.ApiClient() as api_client:
         missing_interface_type=1,
         missing_requirements=1,
         missing_type=1,
-        metadata=[
-            None,
-        ],
-        assignee={},
+        assignees={},
         requirements={},
     ) # IntegrationTestCreate | 
 

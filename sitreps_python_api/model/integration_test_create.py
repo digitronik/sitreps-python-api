@@ -105,8 +105,7 @@ class IntegrationTestCreate(ModelNormal):
             'missing_interface_type': (int,),  # noqa: E501
             'missing_requirements': (int,),  # noqa: E501
             'missing_type': (int,),  # noqa: E501
-            'metadata': ([bool, date, datetime, dict, float, int, list, str, none_type],),  # noqa: E501
-            'assignee': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
+            'assignees': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
             'requirements': ({str: (bool, date, datetime, dict, float, int, list, str, none_type)},),  # noqa: E501
         }
 
@@ -140,8 +139,7 @@ class IntegrationTestCreate(ModelNormal):
         'missing_interface_type': 'missing_interface_type',  # noqa: E501
         'missing_requirements': 'missing_requirements',  # noqa: E501
         'missing_type': 'missing_type',  # noqa: E501
-        'metadata': 'metadata',  # noqa: E501
-        'assignee': 'assignee',  # noqa: E501
+        'assignees': 'assignees',  # noqa: E501
         'requirements': 'requirements',  # noqa: E501
     }
 
@@ -210,8 +208,7 @@ class IntegrationTestCreate(ModelNormal):
             missing_interface_type (int): [optional]  # noqa: E501
             missing_requirements (int): [optional]  # noqa: E501
             missing_type (int): [optional]  # noqa: E501
-            metadata ([bool, date, datetime, dict, float, int, list, str, none_type]): [optional]  # noqa: E501
-            assignee ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            assignees ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
             requirements ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
         """
 
@@ -322,8 +319,7 @@ class IntegrationTestCreate(ModelNormal):
             missing_interface_type (int): [optional]  # noqa: E501
             missing_requirements (int): [optional]  # noqa: E501
             missing_type (int): [optional]  # noqa: E501
-            metadata ([bool, date, datetime, dict, float, int, list, str, none_type]): [optional]  # noqa: E501
-            assignee ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
+            assignees ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
             requirements ({str: (bool, date, datetime, dict, float, int, list, str, none_type)}): [optional]  # noqa: E501
         """
 
